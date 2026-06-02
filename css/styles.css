@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+ 
+
+ 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background: #1b4332 ;
+    border-bottom: 1px solid #1b4332;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 2000;
+}
+ 
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+ 
+.logo-physio { color: white; }
+.logo-futbol  { color: #95d5b2; margin-left: 5px; }
+ 
+
+ 
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 56px;
+    width: 260px;
+    height: calc(100vh - 56px);
+    background: #ffffff;
+    border-right: 1px solid #dcdcdc;
+    overflow-y: auto;
+    z-index: 1000;
+}
+ 
+.sidebar-header {
+    padding: 18px 20px;
+    background: #edf2ff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+ 
+.sidebar-header.activo-header-sel {
+    border-left: 4px solid #2563eb;
+    padding-left: 16px;
+}
+ 
+.sidebar-header.activo-header-sel h2 {
+    color: #2563eb;
+}
+ 
+.sidebar-header h2 {
+    font-size: 18px;
+    color: #1b4332;
+    margin-bottom: 4px;
+}
+ 
+.sidebar-header p {
+    font-size: 12px;
+    color: #666;
+}
+ 
+/* BOTONES */
+ 
+.sidebar button {
+    width: 100%;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 14px 20px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.2s;
+}
+ 
+.sidebar button:hover {
+    background: #f3f6ff;
+    padding-left: 28px;
+}
+ 
+.sidebar button.activo {
+    background: #edf2ff;
+    border-left: 4px solid #2563eb;
+    padding-left: 16px;
+}
+ 
+.sidebar button.activo h3,
+.sidebar button.activo p {
+    color: #2563eb;
+    font-weight: 600;
+}
+ 
+.sidebar button h3 {
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+ 
+.sidebar button p {
+    font-size: 14px;
+    color: #222;
+}
+ 
+/* ── CONTENIDO PRINCIPAL ── */
+ 
+.main {
+    margin-left: 260px;
+    margin-top: 56px;
+    width: calc(100% - 260px);
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+}
+ 
+/* ── PÁGINAS (ocultas por defecto) ── */
+ 
+.pagina {
+    display: none;        /* oculta */
+}
+ 
+.pagina.activa {
+    display: block;       /* visible */
+}
+ 
+/* ── HERO ── */
+ 
+.hero {
+    width: 100%;
+    height: calc(100vh - 56px);
+    background:
+        linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)),
+        url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1500');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+ 
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+ 
+.hero span { color: #95d5b2; }
+ 
+.hero p {
+    max-width: 560px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #e0e0e0;
+}
+ 
+/* ── CONTENIDO DE LECCIONES ── */
+ 
+.contenido {
+    padding: 40px 48px;
+    max-width: 900px;
+}
+ 
+.breadcrumb {
+    font-size: 13px;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+ 
+.contenido h2 {
+    font-size: 28px;
+    color: #111;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+ 
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-bottom: 16px;
+}
+ 
+.card h3 {
+    font-size: 16px;
+    color: #1b4332;
+    margin-bottom: 10px;
+}
+ 
+.card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.sobre-proyecto {
+    padding: 60px 48px;
+    background: #f9fafb;
+}
+
+.sobre-intro {
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.sobre-intro h2 {
+    font-size: 26px;
+    color: #1b4332;
+    margin-bottom: 12px;
+}
+
+.sobre-intro p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.objetivos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 100%;
+}
+
+.objetivo-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.objetivo-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.objetivo-card h3 {
+    font-size: 15px;
+    color: #1b4332;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.objetivo-card p,
+.objetivo-card ul {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.objetivo-card ul {
+    padding-left: 18px;
+}
+
+.objetivo-card ul li {
+    margin-bottom: 4px;
+}
